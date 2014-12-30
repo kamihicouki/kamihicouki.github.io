@@ -1,28 +1,2 @@
 <!-- html5 タグで canvassample1 を呼び出し、表示サイズを決める -->
 <canvas id="canvassample1" width="140" height="140"></canvas>
-<script type="text/javascript">
-/*draw1メソッドを呼ぶ*/
-onload = function() {
-draw1();
-};
-function draw1() {
-/*canvassample1を取得する*/
-var canvas = document.getElementById('canvassample1');
-/*canvasの存在チェックと未対応ブラウザの対処*/
-if ( ! canvas || ! canvas.getContext ) {
-return false;
-}
-/* 2Dコンテキスト */
-var ctx = canvas.getContext('2d');
-/* コンテキスト指定開始 */
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(120, 20);
-ctx.lineTo(120, 120);
-ctx.lineTo(20, 120);
-/* 指定終了 */
-ctx.closePath();
-/* コンテキストを描く */
-ctx.stroke();
-}
-</script>
